@@ -18,3 +18,14 @@ inModelo.focus()
 
 frm.btListar.dispatchEvent(new Event("click"))  // Força a listagem a aparecer automaticamente toda vez que você adiciona um carro.
 })
+
+frm.btListar.addEventListener("click", () => {
+    if(carros.length === 0) {
+        alert("Não há carros na lista!")
+        return
+    }
+
+    const lista = carros.reduce((acumulador, carro) => 
+    acumulador + carro.modelo + " - R$: " + carro.preco.toFixed(2) + "\n", "")
+    resp.innerText = `Lista dos carros cadastrados\n${"-".repeat(40)}\n${lista}`
+})
