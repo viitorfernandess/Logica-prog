@@ -46,5 +46,5 @@ frm.btFiltrar.addEventListener("click", () => {
     for (const carro of carrosFilter) {
         lista += `${carro.modelo} - R$: ${carro.preco.toFixed(2)}\n`
     }
-    resp.innerText = `Carros até R$: ${maximo.toFixed(2)}\n${"-".repeat(40)}\n{lista}`
+    resp.innerText = `Carros até R$: ${maximo.toFixed(2)}\n${"-".repeat(40)}\n${lista}`
 })
